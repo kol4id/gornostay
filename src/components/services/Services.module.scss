@@ -1,0 +1,101 @@
+@use '@/styles.scss' as *;
+
+.services{
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    gap: $space-x6;
+    color: $text-primary;
+    line-height: 140%;
+
+    h2{
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    &_list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $space-x4;
+        
+        .card_small, .card_big{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: $borderRadius-x3;
+            padding: $space-x3;
+            height: 276px;
+            background-color: $surface-cards-blue-default;
+
+            .has_image_background {
+    
+            }
+
+            &.has_image_background::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.85);
+                z-index: 0; // Под контентом
+                border-radius: inherit; // Наследуем скругление
+            }
+
+            p{
+                background-color: $surface-bg-neutral;
+                border-radius: $borderRadius-x2;
+                padding: $space-x1 $space-x2;
+                width: fit-content;
+            }
+
+            .price{
+                font-size: 18px;
+                font-weight: 600;
+                margin-left: auto;
+            }
+
+            .title{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h5{
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+
+                &_option_vert, &_option_horz{
+                    display: flex;
+                    gap: $space-x1;
+                }
+
+                &_option_vert{
+                    flex-direction: column;
+                }
+
+                &_option_horz{
+                    flex-direction: row; 
+                }
+            }
+        }
+
+        .card_small{
+            grid-column: span 1;
+            max-width: 276px;
+        }
+
+        .card_big{
+            grid-column: span 2;
+            max-width: 584px;
+
+            h5{
+                color: $text-primary-inverse
+            }
+
+        }
+        
+    }
+}

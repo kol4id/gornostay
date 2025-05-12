@@ -1,0 +1,69 @@
+@use '@/styles.scss' as *;
+
+.header{
+    justify-content: space-between;
+    width: 100%;
+    height: 69px;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 140%;
+    color: $text-primary;
+
+    &_title{
+        display: flex;
+        width: 222px;
+        align-items: center;
+        gap: $space-x2;
+
+        h3{
+            font-weight: 600;
+            font-family: var(--font-montserrat-alt);
+            font-size: 24px;
+        }
+    }
+
+    &_menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 568px;
+        font-weight: 400;
+        font-size: 18px;
+
+        nav{
+            width: 295px;
+            display: flex;
+            gap: $space-x4;
+
+            button{
+                cursor: pointer;
+                background: none;
+                border: none;
+                letter-spacing: 0%;
+                width: fit-content;
+                height: 25px;
+                font-size: 18px;
+            }
+        }
+
+        &_phone{
+            font-size: 12px;
+            text-align: right;
+            width: 208px;
+            height: 49px;
+            
+            p.phone{
+               font-size: 18px; 
+            }
+
+            .map{
+                display: flex;
+                align-items: center;
+                gap: 0.125rem;
+            }
+        }
+    }
+}
+

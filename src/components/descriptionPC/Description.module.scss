@@ -1,0 +1,137 @@
+@use '@/styles.scss' as *;
+
+.description{
+    width: 100%;
+    padding-top: 16pt;
+    color: $text-primary;
+    line-height: 140%;
+    display: flex;
+    gap: $space-x4;
+
+    &_left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: $space-x6;
+        width: 584px;
+        height: 715px;
+
+        &_title{
+            display: flex;
+            flex-direction: column;
+            gap: $space-x6;
+            height: 272px;
+
+            h1{
+                line-height: 120%;
+                font-size: 68px;
+                font-weight: 400;
+            }
+
+            button{
+                cursor: pointer;
+                background-color: $surface-buttons-yellow-primary;
+                border: none;
+                font-size: 18px;
+                border-radius: $borderRadius-x6;
+                width: 320px;
+                height: 60px;
+            }
+        }
+
+        &_cards{
+            display: flex;
+            height: 267px;
+            gap: $space-x4;
+
+            .card{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: $space-x3;
+                background-color: $surface-icon-green-disabled;
+                width: 276px;
+                height: 267px;
+                border-radius: $borderRadius-x3;
+                gap: $space-x2;
+
+                &_title{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: $space-x05;
+
+                    h6{
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+
+                    p{
+                        font-size: 18px;
+                    }
+                }
+
+                &_icon{
+                    margin-left: auto;
+                    height: 40px;
+                }
+            }
+        }
+        
+    }
+
+    &_right{
+        border-radius: $borderRadius-x6;
+        background-color: $surface-cards-neutral-default;
+        padding: $space-x4 $space-x4 0 $space-x4;
+        display: flex;
+        flex-direction: column;
+        width: 584px;
+        height: 715px;
+        gap: $space-x3;
+
+        &_info{
+            width: 520px;
+            display: flex;
+            justify-content: space-between;
+
+            .social{
+                width: 128px;
+                display: flex;
+                gap: $space-x2;
+
+                button{
+                    cursor: pointer;
+                    background-color: none;
+                    border: none;
+                }
+            }
+
+            .work{
+                border-radius: $borderRadius-x2;
+                background-color: $surface-cards-green-default;
+                width: 177px;
+                padding: $space-x1 $space-x2 $space-x1 $space-x2;
+                display: flex;
+                flex-direction: column;
+
+                &_time{
+                    display: flex;
+                    align-items: center;
+                    
+                    p{
+                        font-size: 18px !important;
+                        font-weight: 600;
+                        padding-left: $space-x05;
+                    }
+                }
+
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+
+
+    }
+}

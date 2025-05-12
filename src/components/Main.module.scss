@@ -1,0 +1,13 @@
+
+
+.main_section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0px auto;
+    max-width: 1200px;
+
+    @media (max-width: 1280px) {
+        margin: 0px 16px;
+    }
+}
