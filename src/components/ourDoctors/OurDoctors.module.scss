@@ -1,0 +1,49 @@
+@use '@/styles.scss' as *;
+
+.our_doctors{
+    width: 100%;
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    gap: $space-x6;
+    color: $text-primary;
+    line-height: 140%;
+
+    h2{
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    &_info{
+        display: flex;
+        gap: $space-x4;
+
+        .card{
+            display: flex;
+            flex-direction: column;
+            gap: $space-x2;
+
+            &_image{
+                object-fit: cover;
+                border-radius: $borderRadius-x3;
+            }
+
+            &_info{
+                display: flex;
+                flex-direction: column;
+                gap: $space-x05;
+                text-align: center;
+
+                h6{
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
