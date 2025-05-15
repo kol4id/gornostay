@@ -11,10 +11,13 @@ interface IProps{
     options?: string[],
     img?: StaticImageData,
     alt?: string,
+    isWhite?: boolean
 }
 
 const Card: FC<IProps> = (props) =>{
 
+    const color = props.isWhite ? 'white' : '';
+    const background = props.isWhite ? '#1D2025' : '';
     const cardStyle = props.type == 'small' ? styles.card_small : styles.card_big;
     const listStyle = props.type == 'small' ? styles.title_option_vert : styles.title_option_horz;
 
@@ -26,14 +29,29 @@ const Card: FC<IProps> = (props) =>{
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
+                    backgroundColor: props.isWhite ? 'transparent' : '',
+                    border: props.isWhite ? '1px solid #1D202540' : '',
                 }}
             >
-                {props.price && <p className={styles.price}>{props.price}</p>}
+                {props.price && <p 
+                    style={{
+                        backgroundColor: background,
+                        color: color
+                    }}
+                    className={styles.price}>
+                        {props.price}
+                    </p>}
                 <section className={styles.title}>
                     <h5>{props.title}</h5>
                     <ul className={listStyle}>
                         {props.options?.map(option => 
-                            <p key={option}>{option}</p>
+                            <p 
+                                style={{
+                                    backgroundColor: background,
+                                    color: color
+                                }}
+                                key={option}
+                            >{option}</p>
                         )}
                     </ul>
                 </section>
