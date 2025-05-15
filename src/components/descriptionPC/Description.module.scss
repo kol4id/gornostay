@@ -28,7 +28,10 @@
                 font-weight: 400;
             }
 
-            button{
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 cursor: pointer;
                 background-color: $surface-buttons-yellow-primary;
                 border: none;
@@ -45,6 +48,7 @@
             gap: $space-x4;
 
             .card{
+                cursor: pointer;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;

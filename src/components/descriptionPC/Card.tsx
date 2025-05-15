@@ -1,6 +1,8 @@
+"use client";
 import { FC } from 'react';
 import styles from './Description.module.scss'
 import Image from "next/image";
+import { smoothScrollToId } from '@/utils/smoothScrollToId';
 
 interface IProps{
     title: string,
@@ -10,9 +12,24 @@ interface IProps{
 }
 
 const Card: FC<IProps> = (props) =>{
+
+    const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>{
+        if(props.scrollTo != undefined){
+            event.preventDefault();
+            smoothScrollToId('services', 200);
+        }
+    }
+
     return(
         <>
-            <article className={styles.card}>
+            <a
+                tabIndex={0}
+                onClick={handleClick}
+                className={styles.card}
+                href={props.linkTo ?? props.scrollTo}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <div className={styles.card_title}>
                     <h6>{props.title}</h6>
                     <p>{props.description}</p>
@@ -25,7 +42,7 @@ const Card: FC<IProps> = (props) =>{
                         height={40}
                     />
                 </div>
-            </article>
+            </a>
         </>
     )
 }

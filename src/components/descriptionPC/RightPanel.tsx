@@ -7,22 +7,30 @@ const RightPanel = () =>{
             <article className={styles.description_right}>
                 <section className={styles.description_right_info}>
                     <nav className={styles.social}>
-                        <button>
+                        <a
+                            href='https://vk.com/club154017977'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Image
                                 src="/vk_icon_black.svg"
                                 alt='circle right'
                                 width={56}
                                 height={56}
                             />
-                        </button>
-                        <button>
+                        </a>
+                        <a
+                            href='https://t.me/gornostaycenter'
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Image
                                 src="/tg_icon_black.svg"
                                 alt='vk icon'
                                 width={56}
                                 height={56}
                             />
-                        </button>
+                        </a>
                     </nav>
                     <div className={styles.work}>
                         <div className={styles.work_time}>
