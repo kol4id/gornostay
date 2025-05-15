@@ -6,21 +6,9 @@ const HeaderMenu = () =>{
         <>
             <article className={styles.header_menu}>
                 <nav>
-                    <button
-                        
-                    >
-                        Услуги
-                    </button>
-                    <button
-                        
-                    >
-                        Специалисты
-                    </button>
-                    <button
-                        
-                    >
-                        О нас
-                    </button>
+                    <a href='#services'>Услуги</a>
+                    <a href='#ourDoctors'>Специалисты</a>
+                    <a href='#aboutUs'>О нас</a>
                 </nav>
                 <HeaderPhone/>
             </article>

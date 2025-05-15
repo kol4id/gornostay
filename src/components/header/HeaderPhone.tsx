@@ -14,7 +14,13 @@ const HeaderPhone = () =>{
                         width={24}
                         height={24}
                     />
-                    <p className={styles.map_address}>г. Реутов, Садовый проезд, 4А</p>
+                    <a 
+                        className={styles.map_address}
+                        href='https://yandex.ru/maps/org/gornostay/235157433113/?ll=37.851755%2C55.768490&z=14'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        г. Реутов, Садовый проезд, 4А</a>
                 </section>
             </article>
         </>
