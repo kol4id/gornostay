@@ -1,0 +1,33 @@
+@use '@/styles.scss' as *;
+
+.sertificats{
+    width: 100%;
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    gap: $space-x6;
+    color: $text-primary;
+    line-height: 140%;
+
+    h2{
+        font-size: 56px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    &_list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $space-x4;
+
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: $borderRadius-x3;
+            border: 1px solid $border-secondary;
+            width: 276px;
+            height: 276px;
+        }
+    }
+}
