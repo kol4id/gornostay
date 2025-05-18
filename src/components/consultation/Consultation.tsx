@@ -10,13 +10,15 @@ const Consultation = () =>{
                     <ConsultationForm/>
                 </article>
                 <article className={styles.consultation_right}>
-                    <Image
-                        className={styles.image}
-                        src='/consultation.jpg'
-                        alt="consultation icon"
-                        width={584} 
-                        height={448}
-                    /> 
+                    <div className={styles.container}>
+                        <Image
+                            className={styles.container_image}
+                            src='/consultation.jpg'
+                            alt="consultation icon"
+                            fill
+                        /> 
+                    </div>
+                    
                 </article>
             </section>
         </>

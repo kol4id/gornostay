@@ -8,6 +8,13 @@
     color: $text-primary;
     line-height: 140%;
 
+    @media (max-width: 1200px) {
+        align-items: center;
+        margin-top: 64px;
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+
     &_left{
         background-color: $surface-bg-yellow;
         border-radius: $borderRadius-x6;
@@ -18,11 +25,30 @@
         display: flex;
         flex-direction: column;
 
+        @media (max-width: 1200px) {
+            z-index: 2;
+            margin-top: -180px;
+            width: min(500px, 100dvw);
+            min-width: 320px;
+            height: 413px;
+            padding: $space-x4 $space-x2;
+        }
+
+        @media (max-width: 390px) {
+            padding: $space-x4 $space-x1;
+        }
+
 
         h2{
             font-size: 56px;
             font-weight: 400;
             line-height: 120%;
+
+            @media (max-width: 1200px) {
+                font-size: 36px;
+                line-height: 130%;
+                text-align: center;
+            }
         }
 
         form{
@@ -57,15 +83,32 @@
                 height: 60px;
                 width: 320px;
                 font-size: 18px;
+
+                @media (max-width: 390px) {
+                   width: 304px;
+                }
             }
         }
     }
 
     &_right{
 
-        .image{
-            border-radius: $borderRadius-x6;
-            object-fit: cover;
+        .container{
+            position: relative;
+            width: 584px;
+            height: 448px;
+
+            @media (max-width: 1200px) {
+                width: min(500px, 100dvw);
+                min-width: 320px;
+                height: 400px;
+            }
+
+            &_image{
+                border-radius: $borderRadius-x6;
+                object-fit: cover;
+                object-position: center;
+            }
         }
     }
 }

@@ -10,6 +10,9 @@ import axios from "axios";
 // }
 
 const ConsultationForm = () =>{
+
+    const [phone, setPhone] = useState('');
+
     const [formData, setFormData] = useState({
         name: '',
         phone: '',
@@ -32,7 +35,7 @@ const ConsultationForm = () =>{
         setStatus('loading');
         // setResponseMessage('');
 
-        if (!formData.name || !formData.phone) {
+        if (!formData.name || !phone) {
             setStatus('error');
             // setResponseMessage('Пожалуйста, заполните имя и телефон.');
             return;
@@ -40,7 +43,7 @@ const ConsultationForm = () =>{
 
         const newData = {
             имя: formData.name,
-            телефон: formData.phone,
+            телефон: phone,
             _subject: `Новая заявка с сайта! (${new Date().toLocaleString()})`,
             _captcha: formData._captcha,
         }
@@ -83,6 +86,13 @@ const ConsultationForm = () =>{
         </>
     )
 
+    if (status == 'error') return(
+        <>
+            <h2>Ошибка!</h2>
+            <p>Что-то пошло не так, попробуйте еще раз позднее </p>
+        </>
+    )
+
     return(
         <>
             <h2>Консультация</h2>
@@ -101,7 +111,12 @@ const ConsultationForm = () =>{
                             placeholder="Телефон" 
                             required type='tel' 
                             name="phone"
-                            onChange={handleChange}
+                            maxLength={12}
+                            value={phone}
+                            onChange={(e) => {
+                                const digitsOnly = e.target.value.replace(/\D/g, '');
+                                setPhone(digitsOnly);
+                            }}
                         />
                         <p>Отправляя форму, вы соглашаетесь с политикой обработки данных.</p>
                     </div>
