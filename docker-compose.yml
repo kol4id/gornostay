@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  gornostay-app: 
+    container_name: gornostay_app
+    build: .
+    image: yungbrick/gornostay:latest
+    ports:
+      - "8080:3000"                          
+    restart: unless-stopped 
+    environment:
+      - NODE_ENV=production 
+      - PORT=3000           
+    networks: 
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
