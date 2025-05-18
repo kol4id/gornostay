@@ -11,6 +11,20 @@
     line-height: 140%;
     color: $text-primary;
 
+    @media (max-width: 1200px) {
+        padding: 0px $space-x2;
+        box-shadow: 0 3px 4px #00000040;
+        border-bottom-left-radius: $borderRadius-x3;
+        border-bottom-right-radius: $borderRadius-x3;
+
+        margin-top: 0;
+        height: 80px;
+    }
+
+    @media (max-width: 390px) {
+        padding: 0px $space-x1;
+    }
+
     &_title{
         display: flex;
         width: 222px;
@@ -21,6 +35,10 @@
             font-weight: 600;
             font-family: var(--font-montserrat-alt);
             font-size: 24px;
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
         }
     }
 
@@ -31,6 +49,12 @@
         width: 568px;
         font-weight: 400;
         font-size: 18px;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
+
+        
 
         nav{
             width: 295px;
@@ -63,6 +87,36 @@
                 align-items: center;
                 gap: 0.125rem;
             }
+        }
+    }
+
+    &_tablet{
+        display: none;
+
+        @media (max-width: 1200px) {
+            display: flex;
+            gap: $space-x1;
+        }
+
+        .buttons_menu{
+            display: flex;
+            gap: $space-x1;
+        }
+
+        .button, .button_menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $border-primary;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            border-radius: $borderRadius-x6;
+        }
+
+        .button_menu{
+            border: none;
+            background-color: $surface-buttons-yellow-primary;
         }
     }
 }

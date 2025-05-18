@@ -1,5 +1,6 @@
 import styles from './Header.module.scss'
 import HeaderPhone from './HeaderPhone';
+import HeaderTabletMenu from './HeaderTabletMenu';
 
 const HeaderMenu = () =>{
     return(
@@ -11,6 +12,9 @@ const HeaderMenu = () =>{
                     <a href='#aboutUs'>О нас</a>
                 </nav>
                 <HeaderPhone/>
+            </article>
+            <article className={styles.header_tablet}>
+                <HeaderTabletMenu/>
             </article>
         </>
     )
