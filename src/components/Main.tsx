@@ -12,15 +12,18 @@ const Main = () =>{
     return(
         <>
             <section className={styles.main_section}>
-                <Header/>
-                <Description/>
-                <Services/>
-                <AboutUs/>
-                <OurDoctors/>
-                <Sertificats/>
-                <Consultation/>
+                <section className={styles.main_section_padding}>
+                    <Header/>
+                    <Description/>
+                    <Services/>
+                    <AboutUs/>
+                    <OurDoctors/>
+                    <Sertificats/>
+                    <Consultation/>
+                </section>  
                 <Footer/>
             </section>
+            
         </>
     )
 }
