@@ -28,10 +28,10 @@ const HeaderModalMenu: FC<IProps> = ({onClose}) =>{
                     <section className={styles.info}>
                         <div className={styles.links}>
                             <h6>Клиника</h6>
-                            <a href='#services'>Услуги</a>
-                            <a href='#aboutUs'>О нас</a>
-                            <a href='#ourDoctors'>Наши доктора</a>
-                            <a href='#sertificates'>Сертификаты</a>
+                            <a href='#services' onClick={onClose}>Услуги</a>
+                            <a href='#aboutUs' onClick={onClose}>О нас</a>
+                            <a href='#ourDoctors' onClick={onClose}>Наши доктора</a>
+                            <a href='#sertificates' onClick={onClose}>Сертификаты</a>
                         </div>
                         <article className={styles.phone}>
                             <p className={styles.phone}>8 (958) 125-25-34</p>
@@ -48,13 +48,18 @@ const HeaderModalMenu: FC<IProps> = ({onClose}) =>{
                                     href='https://yandex.ru/maps/org/gornostay/235157433113/?ll=37.851755%2C55.768490&z=14'
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    onClick={onClose}
                                 >
                                     г. Реутов, Садовый проезд, 4А <br/>
                                     Ежедневно: 10:00-21:00
                                 </a>
                             </section>
                         </article>
-                        <a href='#consultation' className={styles.service}>Записаться на прием</a>
+                        <a href='#consultation' className={styles.service}
+                            onClick={onClose}
+                        >
+                            Записаться на прием
+                        </a>
                     </section>
                 </main>
             </motion.div>

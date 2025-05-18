@@ -10,7 +10,7 @@
     height: 100dvh;
 
     .header{
-        height: 80px;
+        min-height: 80px;
         justify-content: space-between;
         width: 100%;
         display: flex;
@@ -73,7 +73,7 @@
             display: flex;
             flex-direction: column;
             gap: $space-x2;
-            width: 276px;
+            width: 100%;
             padding-bottom: 32px;
             border-bottom: 1px solid $border-secondary;
 
@@ -109,7 +109,7 @@
 
         .service{
             margin: 0 auto;
-            margin-top: 300px;
+            margin-top: 150px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -121,8 +121,16 @@
             width: 350px;
             height: 60px;
 
+            &:hover{
+                background-color: $surface-buttons-yellow-hover;
+            }
+
+            &:active{
+                background-color: $surface-buttons-yellow-active;
+            }
+
             @media (max-width: 390px) {
-                margin-top: 74px;
+                margin-top: 70px;
                 width: 304px;
             }
         }

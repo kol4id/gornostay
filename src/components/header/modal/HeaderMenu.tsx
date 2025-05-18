@@ -14,22 +14,34 @@ const HeaderMenu: FC<IProps> = ({onClose}) =>{
                 <section
                     className={styles.buttons_menu}
                 >
-                    <button className={styles.button}>
+                    <a
+                        className={styles.button}
+                        href='https://vk.com/club154017977'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={onClose}
+                    >
                         <Image
                             src="/icon_m_vk.svg"
                             alt='vk logo'
                             width={24}
                             height={24}
                         />
-                    </button>
-                    <button className={styles.button}>
+                    </a>
+                    <a
+                        className={styles.button}
+                        href='https://t.me/gornostaycenter'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={onClose}
+                    >   
                         <Image
                             src="/icon_m_telegram.svg"
                             alt='tg logo'
                             width={24}
                             height={24}
                         />
-                    </button>
+                    </a>
                 </section>
                 <button 
                     className={styles.button_menu}

@@ -15,27 +15,36 @@
         gap: 0px;
     }
 
+    @media (max-width: 1240px) {
+        gap: $space-x2;
+    }
+
     &_left{
         background-color: $surface-bg-yellow;
         border-radius: $borderRadius-x6;
         padding: $space-x6;
         gap: $space-x4;
-        width: 584px;
+        min-width: 584px;
         height: 448px;
         display: flex;
         flex-direction: column;
 
+        @media (max-width: 1240px) {
+            min-width: 574px;
+        }
+
         @media (max-width: 1200px) {
             z-index: 2;
             margin-top: -180px;
-            width: min(500px, 100dvw);
+            width: min(390px, 100%);
             min-width: 320px;
             height: 413px;
             padding: $space-x4 $space-x2;
+            border-radius: $borderRadius-x3;
         }
 
         @media (max-width: 390px) {
-            padding: $space-x4 $space-x1;
+            padding: $space-x4 $space-x1 $space-x4 $space-x1;
         }
 
 
@@ -52,6 +61,7 @@
         }
 
         form{
+            color: $text-primary;
             display: flex;
             flex-direction: column;
             gap: 24px;
@@ -70,44 +80,75 @@
                 }
 
                 p{
-                    text-align: center;
+                    margin: 0px auto;
+                    text-align: left;
                     font-size: 12px;
                 }
             }
 
             button{
+                color: $text-primary;
                 cursor: pointer;
                 align-self: center;
                 border: none;
+                background-color: $surface-buttons-neutral-primary-default;
                 border-radius: $borderRadius-x6;
                 height: 60px;
                 width: 320px;
                 font-size: 18px;
 
-                @media (max-width: 390px) {
-                   width: 304px;
+                &:hover{
+                    background-color: $surface-buttons-neutral-primary-hover;
+                }
+
+                &:active{
+                    background-color: $surface-buttons-neutral-primary-active;
+                }
+
+                @media (max-width: 1200px) {
+                //    width: 304px;
+                    width: 100%;
                 }
             }
         }
     }
 
     &_right{
+        display: flex;
+        width: 100%;
+
+        @media (max-width: 1200px) {
+            // align-items: center;
+            justify-content: center;
+            // justify-content: centers;
+            // margin: 0 auto;
+        }
 
         .container{
             position: relative;
             width: 584px;
             height: 448px;
 
+            @media (max-width: 1240px) {
+                min-width: 574px;
+            }
+
             @media (max-width: 1200px) {
-                width: min(500px, 100dvw);
+                // width: 390px;
+                width: min(390px, 100%);
                 min-width: 320px;
                 height: 400px;
             }
 
             &_image{
+                width: 100%;
                 border-radius: $borderRadius-x6;
                 object-fit: cover;
                 object-position: center;
+
+                @media (max-width: 1200px) {
+                    border-radius: $borderRadius-x3;
+                }
             }
         }
     }

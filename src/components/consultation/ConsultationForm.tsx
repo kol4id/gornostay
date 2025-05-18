@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react"
+import { useRef, useState } from "react"
 import styles from './Consultation.module.scss';
 import axios from "axios";
 
@@ -12,6 +12,7 @@ import axios from "axios";
 const ConsultationForm = () =>{
 
     const [phone, setPhone] = useState('');
+    const formRef = useRef<HTMLFormElement>(null);
 
     const [formData, setFormData] = useState({
         name: '',
@@ -23,7 +24,7 @@ const ConsultationForm = () =>{
     const [status, setStatus] = useState('');
     // const [responseMessage, setResponseMessage] = useState('');
 
-    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/over90006at9@gmail.com';
+    const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/gornostaycenter@mail.ru';
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -31,8 +32,25 @@ const ConsultationForm = () =>{
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>{
-        e.preventDefault();
+        e.preventDefault(); 
         setStatus('loading');
+
+        // const form = formRef.current;
+        // if(form){
+        //     if (!form.checkValidity()) {
+        //         const invalidFields = Array.from(form.elements).filter(
+        //         (el): el is HTMLInputElement =>
+        //             el instanceof HTMLInputElement && !el.validity.valid
+        //         );
+
+        //         invalidFields.forEach((field) => {
+        //             field.style.border = "2px solid red"; // Ошибки нет
+        //         });
+
+        //         return;
+        //     }
+        // }
+        
         // setResponseMessage('');
 
         if (!formData.name || !phone) {
@@ -98,6 +116,7 @@ const ConsultationForm = () =>{
             <h2>Консультация</h2>
             <article>
                 <form
+                    ref={formRef}
                     onSubmit={handleSubmit}
                 >
                     <div className={styles.inputs}>

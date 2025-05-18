@@ -1,10 +1,13 @@
 @use '@/styles.scss' as *;
 
 .footer{
+    // margin: 0 auto;
     margin-top: 128px;
     padding: $space-x4 0 $space-x8 0;
+    background-color: $surface-cards-neutral-default;
     gap: $space-x2;
     width: 100%;
+    
     display: flex;
     flex-direction: column;
     color: $text-primary;
@@ -23,70 +26,162 @@
         gap: 0px;
     }
 
-
-    &_top{
+    &_main{
+        max-width: 1200px;
+        // align-items: center;
+        // justify-content: center;
+        width: 100%;
         display: flex;
-        padding-bottom: 48px;
-        border-bottom: $border-secondary 1px solid;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 $space-x2;
 
         @media (max-width: 1200px) {
-            display: none;
+            margin: 0;
+            padding: 0;
         }
 
-        &_left{
-            display: flex;
-            gap: $space-x4;
 
-            .social{
+        &_top{
+            width: 100%;
+            display: flex;
+            padding-bottom: 48px;
+            border-bottom: $border-secondary 1px solid;
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
+
+            &_left{
                 display: flex;
-                flex-direction: column;
-                gap: $space-x6;
-                width: 276px;
+                gap: $space-x4;
+
+                .social{
+                    display: flex;
+                    flex-direction: column;
+                    gap: $space-x6;
+                    width: 276px;
+
+                    h3{
+                        font-weight: 600;
+                        font-family: var(--font-montserrat-alt);
+                        font-size: 24px;
+                    }
+                    
+                    &_links{
+                        width: 128px;
+                        display: flex;
+                        gap: $space-x2;
+
+                        a{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            background-color: none;
+                            border: none;
+
+                            background-color: $surface-buttons-neutral-primary-default;
+
+                            &:hover{
+                                background-color: $surface-buttons-neutral-primary-hover;
+                            }
+
+                            &:active{
+                                background-color: $surface-buttons-neutral-primary-active;
+                            }
+                        }
+
+                        @media (max-width: 1200px) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .links{
+                    text-align: left;
+                    display: flex;
+                    flex-direction: column;
+                    gap: $space-x2;
+                    width: 276px;
+
+                    a{
+                        width: fit-content;
+                    }
+
+                    h6{
+                        margin-top: 8px;
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            &_right{
+                display: flex;
+                gap: $space-x4;
+
+                .contacts{
+                    display: flex;
+                    flex-direction: column;
+                    gap: $space-x2;
+                    width: 276px;
+
+                    h6{
+                        margin-top: 8px;
+                        font-size: 24px;
+                    }
+                }
+
+                .work_time{
+                    display: flex;
+                    flex-direction: column;
+                    gap: $space-x2;
+
+                    h6{
+                        margin-top: 8px;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        &_bottom{
+            margin-top: 16px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            a{
+                text-decoration: underline solid;
+            }
+        }
+
+        &_mobile{
+            display: flex;
+            flex-direction: column;
+            gap: $space-x4;
+            padding-bottom: 48px;
+            border-bottom: $border-secondary 1px solid;
+            // margin-bottom: 16px;
+
+            @media (min-width: 1200px) {
+                display: none;
+            }
+
+            &_title{
+                display: flex;
+                width: 222px;
+                align-items: center;
+                gap: $space-x2;
 
                 h3{
                     font-weight: 600;
                     font-family: var(--font-montserrat-alt);
                     font-size: 24px;
-                }
-                
-                &_links{
-                    width: 128px;
-                    display: flex;
-                    gap: $space-x2;
 
-                    button{
-                        cursor: pointer;
-                        background-color: none;
-                        border: none;
-                    }
-
-                    @media (max-width: 1200px) {
-                        display: none;
-                    }
                 }
             }
-
-            .links{
-                text-align: left;
-                display: flex;
-                flex-direction: column;
-                gap: $space-x2;
-                width: 276px;
-
-                a{
-                    width: fit-content;
-                }
-
-                h6{
-                    margin-top: 8px;
-                    font-size: 24px;
-                }
-            }
-        }
-
-        &_right{
-            display: flex;
-            gap: $space-x4;
 
             .contacts{
                 display: flex;
@@ -110,66 +205,34 @@
                     font-size: 24px;
                 }
             }
-        }
-    }
 
-    &_bottom{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+            .social_links{
+                width: 128px;
+                display: flex;
+                gap: $space-x2;
 
-        a{
-            text-decoration: underline solid;
-        }
-    }
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    background-color: none;
+                    border: none;
 
-    &_mobile{
-        display: flex;
-        flex-direction: column;
-        gap: $space-x4;
-        padding-bottom: 48px;
-        border-bottom: $border-secondary 1px solid;
-        margin-bottom: 16px;
+                    background-color: $surface-buttons-neutral-primary-default;
 
-        @media (min-width: 1200px) {
-            display: none;
-        }
+                    &:hover{
+                        background-color: $surface-buttons-neutral-primary-hover;
+                    }
 
-        &_title{
-            display: flex;
-            width: 222px;
-            align-items: center;
-            gap: $space-x2;
-
-            h3{
-                font-weight: 600;
-                font-family: var(--font-montserrat-alt);
-                font-size: 24px;
-
-            }
-        }
-
-        .contacts{
-            display: flex;
-            flex-direction: column;
-            gap: $space-x2;
-            width: 276px;
-
-            h6{
-                margin-top: 8px;
-                font-size: 24px;
-            }
-        }
-
-        .work_time{
-            display: flex;
-            flex-direction: column;
-            gap: $space-x2;
-
-            h6{
-                margin-top: 8px;
-                font-size: 24px;
+                    &:active{
+                        background-color: $surface-buttons-neutral-primary-active;
+                    }
+                }
             }
         }
     }
+
+    
 }

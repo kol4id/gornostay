@@ -35,6 +35,10 @@
         grid-template-columns: repeat(4, 1fr);
         gap: $space-x4;
 
+        @media (max-width: 1240px) {
+            gap: $space-x2;   
+        }
+
         @media (max-width: 1200px) {
             display: flex;
             overflow-x: auto;
@@ -50,6 +54,30 @@
             border: 1px solid $border-secondary;
             width: 276px;
             height: 276px;
+
+            @media (min-width: 1200px) {
+                &:hover{
+                    transition: 0.15s ease-in-out; 
+                    scale: 0.95;
+                }
+
+                &:not(:hover){
+                    transition: 0.15s ease-in-out; 
+                }
+
+                &:hover .card_image{
+                    transition: 0.15s ease-in-out; 
+                    scale: 1.05;
+                }
+
+                &:not(:hover) .card_image{
+                    transition: 0.15s ease-in-out; 
+                }
+            }
+        
+            .card_image{
+
+            }
         }
     }
 }

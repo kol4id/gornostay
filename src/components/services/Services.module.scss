@@ -54,6 +54,7 @@
                 max-width: 260px;
                 min-height: 260px;
                 max-height: 260px;
+                padding: $space-x2;
             }
 
             p{
@@ -62,6 +63,10 @@
                 padding: $space-x1 $space-x2;
                 width: fit-content;
                 font-size: 18px;
+
+                @media (max-width: 1200px) {
+                    border-radius: $borderRadius-x3;
+                }
             }
 
             .price{
@@ -78,6 +83,7 @@
                 h5{
                     font-size: 28px;
                     font-weight: 600;
+                    line-height: 140%;
                 }
 
                 &_option_vert, &_option_horz{

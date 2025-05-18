@@ -25,14 +25,14 @@ const HeaderTabletMenu = () =>{
             <section
                 className={styles.buttons_menu}
             >
-                <button className={styles.button}>
+                <a className={styles.button} href='#consultation'>
                     <Image
                         src="/icon_m_phone.svg"
                         alt='phone logo'
                         width={24}
                         height={24}
                     />
-                </button>
+                </a>
             </section>
             <button 
                 className={styles.button_menu}

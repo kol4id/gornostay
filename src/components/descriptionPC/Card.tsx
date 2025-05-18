@@ -22,27 +22,29 @@ const Card: FC<IProps> = (props) =>{
 
     return(
         <>
-            <a
-                tabIndex={0}
-                onClick={handleClick}
-                className={styles.card}
-                href={props.linkTo ?? props.scrollTo}
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <div className={styles.card_title}>
-                    <h6>{props.title}</h6>
-                    <p>{props.description}</p>
-                </div>
-                <div className={styles.card_icon}>
-                    <Image
-                        src="/icon_circle_right.svg"
-                        alt='circle right'
-                        width={40}
-                        height={40}
-                    />
-                </div>
-            </a>
+            <section className={styles.card}>
+                <a
+                    tabIndex={0}
+                    onClick={handleClick}
+                    className={styles.card_inner}
+                    href={props.linkTo ?? props.scrollTo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div className={styles.card_inner_title}>
+                        <h6>{props.title}</h6>
+                        <p>{props.description}</p>
+                    </div>
+                    <div className={styles.card_inner_icon}>
+                        <Image
+                            src="/icon_circle_right.svg"
+                            alt='circle right'
+                            width={40}
+                            height={40}
+                        />
+                    </div>
+                </a>
+            </section>
         </>
     )
 }

@@ -10,6 +10,11 @@
     align-items: center;
     line-height: 140%;
     color: $text-primary;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    background-color: $surface-bg-neutral;
+    box-shadow: 30px 0 0 0 $surface-bg-neutral;
 
     @media (max-width: 1200px) {
         padding: 0px $space-x2;
@@ -36,7 +41,7 @@
             font-family: var(--font-montserrat-alt);
             font-size: 24px;
 
-            @media (max-width: 1200px) {
+            @media (max-width: 600px) {
                 display: none;
             }
         }
@@ -117,6 +122,18 @@
         .button_menu{
             border: none;
             background-color: $surface-buttons-yellow-primary;
+        }
+
+        .button{
+            background-color: $surface-buttons-neutral-primary-default;
+
+            &:hover{
+                background-color: $surface-buttons-neutral-primary-hover;
+            }
+
+            &:active{
+                background-color: $surface-buttons-neutral-primary-active;
+            }
         }
     }
 }

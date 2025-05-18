@@ -44,6 +44,14 @@
                 border-radius: $borderRadius-x6;
                 width: 320px;
                 height: 60px;
+
+                &:hover{
+                    background-color: $surface-buttons-yellow-hover;
+                }
+
+                &:active{
+                    background-color: $surface-buttons-yellow-active;
+                }
             }
         }
 
@@ -51,6 +59,7 @@
             display: flex;
             height: 267px;
             gap: $space-x4;
+            
         }
         
     }
@@ -75,10 +84,26 @@
                 display: flex;
                 gap: $space-x2;
 
-                button{
+                a{
+                    width: 56px;
+                    height: 56px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
                     cursor: pointer;
                     background-color: none;
                     border: none;
+                    background-color: $surface-buttons-neutral-primary-default;
+
+                    &:hover{
+                        background-color: $surface-buttons-neutral-primary-hover;
+                    }
+
+                    &:active{
+                        background-color: $surface-buttons-neutral-primary-active;
+                    }
+
                 }
             }
 
@@ -111,49 +136,81 @@
     }
 }
 
+
 .card{
-    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: $space-x3;
-    background-color: $surface-icon-green-disabled;
+    justify-content: center;
+    align-items: center;
     max-width: 276px;
     max-height: 267px;
     min-width : 276px;
     min-height: 267px;
+    background-color: $surface-icon-green-disabled;
     border-radius: $borderRadius-x3;
-    gap: $space-x2;
+    cursor: pointer;
 
     @media (max-width: 1200px) {
         min-width : 260px;
         min-height: 201px;
         max-width: 260px;
         max-height: 201px;
-        padding: $space-x2;
     }
 
-    &_title{
+    @media (min-width: 1200px) {
+        &:hover{
+            transition: 0.15s ease-in-out; 
+            scale: 0.95;
+        }
+
+        &:not(:hover){
+            transition: 0.15s ease-in-out; 
+        }
+
+        &:hover .card_inner{
+            transition: 0.15s ease-in-out; 
+            scale: 1.05;
+        }
+
+        &:not(:hover) .card_inner{
+            transition: 0.15s ease-in-out; 
+        }
+    }
+    
+
+    .card_inner{
         display: flex;
         flex-direction: column;
-        width: 100%;
-        gap: $space-x05;
+        justify-content: space-between;
+        padding: $space-x3;
+        gap: $space-x2;
+        line-height: 140%;
+        letter-spacing: 0%;
 
-        h6{
-            font-size: 24px;
-            font-weight: 600;
+        &_title{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: $space-x05;
+
+            h6{
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 140%;
+            }
+
+            p{
+                font-size: 18px;
+                line-height: 140%;
+            }
         }
 
-        p{
-            font-size: 18px;
+        &_icon{
+            margin-left: auto;
+            height: 40px;
         }
-    }
-
-    &_icon{
-        margin-left: auto;
-        height: 40px;
     }
 }
+
 
 .description_mobile{
     display: none;

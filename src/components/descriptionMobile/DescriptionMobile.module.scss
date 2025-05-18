@@ -6,18 +6,22 @@
     display: flex;
     flex-direction: column;
     gap: $space-x4;
-    padding: 0 $space-x2;
+    
     line-height: 140%;
     color: $text-primary;
 
-    @media (max-width: 320px) {
-        padding: 0 $space-x1;
-    }
+    
 
     h4{
         line-height: 130%;
         font-size: 36px;
         font-weight: 600;
+
+        padding: 0 $space-x2;
+
+        @media (max-width: 390px) {
+            padding: 0 $space-x1;
+        }
     }
 
     &_info{
@@ -25,6 +29,12 @@
         flex-direction: column;
         padding: $space-x3 $space-x2 $space-x4 $space-x2;
         gap: $space-x3;
+        border-radius: $borderRadius-x3;
+        background-color: $surface-cards-neutral-default;
+
+        @media (max-width: 390px) {
+            padding: $space-x3 $space-x1 $space-x4 $space-x1;
+        }
 
         .work{
             border-radius: $borderRadius-x2;
@@ -61,10 +71,37 @@
                 width: 358px;
                 height: 360px;
 
-                @media (max-width: 390px) {
+                @media (max-width: 480px) {
+                    width: 324px;
+                    height: 223px;
+                }
+
+                @media (max-width: 440px) {
                     width: 304px;
                     height: 203px;
                 }
+
+                @media (max-width: 400px) {
+                    width: 284px;
+                    height: 183px;
+                }
+
+                @media (max-width: 380px) {
+                    width: 264px;
+                    height: 163px;
+                }
+
+                @media (max-width: 360px) {
+                    width: 254px;
+                    height: 153px;
+                }
+
+                @media (max-width: 340px) {
+                    width: 244px;
+                    height: 143px;
+                }
+
+               
 
                 .image{
                     object-position: top center;
@@ -86,6 +123,14 @@
                 width: 358px;
                 height: 60px;
 
+                &:hover{
+                    background-color: $surface-buttons-yellow-hover;
+                }
+
+                &:active{
+                    background-color: $surface-buttons-yellow-active;
+                }
+
                 @media (max-width: 390px) {
                     width: 304px;
                 }
@@ -93,10 +138,18 @@
         }
     }
     .cards{
+        // height: fit-content;
+        overflow-y: hidden;
         width: 100%;
         gap: $space-x2;
         display: flex;
         overflow-x: auto;
+
+        padding: 0 $space-x2;
+
+        @media (max-width: 390px) {
+            padding: 0 $space-x1;
+        }
 
         @media (min-width: 590px) {
             justify-content: center;

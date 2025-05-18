@@ -4,8 +4,8 @@ import styles from './Footer.module.scss';
 const FooterMobile = () =>{
     return(
         <>
-            <section className={styles.footer_mobile}>
-                <article className={styles.footer_mobile_title}>
+            <section className={styles.footer_main_mobile}>
+                <article className={styles.footer_main_mobile_title}>
                     <Image
                         src="/logo.svg"
                         alt='app logo'
