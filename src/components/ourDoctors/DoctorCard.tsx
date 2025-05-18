@@ -12,13 +12,14 @@ const DoctorCard: FC<IProps> = (props) =>{
     return(
         <>
             <section className={styles.card}>
-                <Image
-                    className={styles.card_image}
-                    src={props.imgUrl}
-                    alt={props.docName}
-                    width={276} 
-                    height={376}
-                /> 
+                <div className={styles.container}>
+                    <Image
+                        className={styles.container_image}
+                        src={props.imgUrl}
+                        alt={props.docName}
+                        fill
+                    /> 
+                </div>
                 <div className={styles.card_info}>
                     <h6>{props.docName}</h6>
                     <p>{props.docPosition}</p>

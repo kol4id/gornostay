@@ -9,24 +9,65 @@
     color: $text-primary;
     line-height: 140%;
 
+
+    @media (max-width: 1200px) {
+        margin-top: 64px;
+        gap: $space-x4;
+        padding: 0 $space-x2;        
+    }
+
+    @media (max-width: 390px) {
+        padding: 0 $space-x1;        
+    }
+
     h2{
         font-size: 56px;
         font-weight: 400;
         line-height: 120%;
+
+        @media (max-width: 1200px) {
+            
+            font-size: 36px;
+            line-height: 130%;
+        }
+
     }
 
     &_info{
         display: flex;
         gap: $space-x4;
+        
+        @media (min-width: 1136px) {
+            justify-content: center;
+        }
+
+        @media (max-width: 1240px) {
+            gap: $space-x2;        
+        }
+
+        @media (max-width: 1200px) {
+            overflow-x: auto;
+        }
 
         .card{
             display: flex;
             flex-direction: column;
             gap: $space-x2;
 
-            &_image{
-                object-fit: cover;
-                border-radius: $borderRadius-x3;
+            .container{
+                position: relative;
+                width: 276px;
+                height: 376px;
+
+                @media (max-width: 1200px) {
+                    width: 260px;
+                }
+
+                &_image{
+                    
+                    object-fit: cover;
+                    border-radius: $borderRadius-x3;
+                }
             }
 
             &_info{
