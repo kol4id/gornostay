@@ -8,7 +8,10 @@ const AboutUs = () => {
         <section className={styles.about_us_info}>
             <article className={styles.left}>
                 <div className={styles.left_text}>
-                    <p>В “Горностае“ мы заботимся о здоровье ваших питомцев, оказывая качественные ветеринарные услуги. Опытная команда докторов клиники готова предложить помощь в самых сложных случаях.</p>
+                    <div>
+                        <span>В “Горностае“ мы заботимся о здоровье ваших питомцев, оказывая качественные ветеринарные услуги.</span>
+                        <span className={styles.p_second}>Опытная команда докторов клиники готова предложить помощь в самых сложных случаях.</span>
+                    </div>
                     <ul className={styles.left_text_list}>
                         <li>
                             <Image
@@ -17,7 +20,8 @@ const AboutUs = () => {
                                 width={24} 
                                 height={24}
                             />   
-                            Оснащены современным оборудованием
+                            <span className={styles.first}>Оснащены современным оборудованием</span>
+                            <span className={styles.second}>Современное оборудование</span>
                         </li>
                         <li>
                             <Image
@@ -25,8 +29,9 @@ const AboutUs = () => {
                                 alt="favorite icon"
                                 width={24} 
                                 height={24}
-                            />   
-                            Команда сертифицированных специалистов
+                            />
+                            <span className={styles.first}>Команда сертифицированных специалистов</span>
+                            <span className={styles.second}>Лучшие специалисты</span>
                         </li>
                         <li>
                             <Image
@@ -34,21 +39,25 @@ const AboutUs = () => {
                                 alt="folder icon"
                                 width={24} 
                                 height={24}
-                            />   
-                            Оказываем полный спектр ветеринарных услуг
+                            />
+                            <span className={styles.first}>Оказываем полный спектр ветеринарных услуг</span>
+                            <span className={styles.second}>Полный спектр услуг</span>
                         </li>
                     </ul>
                 </div>
                 <a href='#consultation' className={styles.ctaButton}>Оставить заявку</a>
             </article>
             <article className={styles.right}>
-                <Image
-                    src="/vet_with_cat.jpg"
-                    alt="Ветеринар с котом в клинике Горностай"
-                    width={584} 
-                    height={443}
-                    className={styles.right_image}
-                />
+                <div className={styles.right_container}>
+                    <Image
+                        src="/vet_with_cat.jpg"
+                        alt="Ветеринар с котом в клинике Горностай"
+                        fill
+                        className={styles.right_container_image}
+                    />
+                </div>
+                
+                <a href='#consultation' className={styles.ctaButton}>Оставить заявку</a>
             </article>
         </section>
         
