@@ -5,6 +5,7 @@ import stomatology from '../../../public/stomatology_card.jpg'
 import surgery from '../../../public/surgery_card.jpg'
 import cat_top_right from '../../../public/cat_top_right_card.png'
 import cat_middle_left from '../../../public/cat_middle_left_card.png'
+import ServiceMobile from './ServicesMobile'
 
 
 const servicesData = [
@@ -39,6 +40,7 @@ const Services = () =>{
                         />
                     ))}
                 </article>
+                <ServiceMobile/>
             </section>
         </>
     )

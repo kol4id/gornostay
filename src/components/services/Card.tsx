@@ -5,13 +5,14 @@ import { FC } from "react";
 export type cardType = 'small' | 'big';
 
 interface IProps{
-    type: cardType,
+    type?: cardType,
     price?: string,
     title?: string,
     options?: string[],
     img?: StaticImageData,
     alt?: string,
-    isWhite?: boolean
+    isWhite?: boolean,
+    titleColor?: string
 }
 
 const Card: FC<IProps> = (props) =>{
@@ -42,7 +43,9 @@ const Card: FC<IProps> = (props) =>{
                         {props.price}
                     </p>}
                 <section className={styles.title}>
-                    <h5>{props.title}</h5>
+                    <h5
+                        style={{color: props.titleColor ?? ''}}
+                    >{props.title}</h5>
                     <ul className={listStyle}>
                         {props.options?.map(option => 
                             <p 
