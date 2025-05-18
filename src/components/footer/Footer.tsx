@@ -1,6 +1,7 @@
 import styles from './Footer.module.scss';
 import FooterContacts from './FooterContacts';
 import FooterLinks from './FooterLinks';
+import FooterMobile from './FooterMobile';
 import FooterSocial from './FooterSocial';
 
 const Footer = () =>{
@@ -20,6 +21,7 @@ const Footer = () =>{
                         </div>
                     </article>
                 </section>
+                <FooterMobile/>
                 <section className={styles.footer_bottom}>
                     <div>
                         made by <a

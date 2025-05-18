@@ -11,10 +11,27 @@
     line-height: 140%;
     font-size: 18px;
 
+    @media (max-width: 1200px) {
+        padding: $space-x4 $space-x2 $space-x8 $space-x2;
+        margin-top: 64px;
+        gap: 0px;
+    }
+
+    @media (max-width: 390px) {
+        padding: $space-x4 $space-x1 $space-x8 $space-x1;
+        margin-top: 64px;
+        gap: 0px;
+    }
+
+
     &_top{
         display: flex;
         padding-bottom: 48px;
         border-bottom: $border-secondary 1px solid;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
 
         &_left{
             display: flex;
@@ -41,6 +58,10 @@
                         cursor: pointer;
                         background-color: none;
                         border: none;
+                    }
+
+                    @media (max-width: 1200px) {
+                        display: none;
                     }
                 }
             }
@@ -99,6 +120,56 @@
 
         a{
             text-decoration: underline solid;
+        }
+    }
+
+    &_mobile{
+        display: flex;
+        flex-direction: column;
+        gap: $space-x4;
+        padding-bottom: 48px;
+        border-bottom: $border-secondary 1px solid;
+        margin-bottom: 16px;
+
+        @media (min-width: 1200px) {
+            display: none;
+        }
+
+        &_title{
+            display: flex;
+            width: 222px;
+            align-items: center;
+            gap: $space-x2;
+
+            h3{
+                font-weight: 600;
+                font-family: var(--font-montserrat-alt);
+                font-size: 24px;
+
+            }
+        }
+
+        .contacts{
+            display: flex;
+            flex-direction: column;
+            gap: $space-x2;
+            width: 276px;
+
+            h6{
+                margin-top: 8px;
+                font-size: 24px;
+            }
+        }
+
+        .work_time{
+            display: flex;
+            flex-direction: column;
+            gap: $space-x2;
+
+            h6{
+                margin-top: 8px;
+                font-size: 24px;
+            }
         }
     }
 }
