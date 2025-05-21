@@ -16,7 +16,7 @@ const Card: FC<IProps> = (props) =>{
     const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) =>{
         if(props.scrollTo != undefined){
             event.preventDefault();
-            smoothScrollToId('services', 200);
+            smoothScrollToId('services', 250);
         }
     }
 

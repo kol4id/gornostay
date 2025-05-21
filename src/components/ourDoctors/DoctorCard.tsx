@@ -6,6 +6,7 @@ interface IProps{
     imgUrl: string;
     docName: string;
     docPosition: string;
+    // docSecPosition: string;
 }
 
 const DoctorCard: FC<IProps> = (props) =>{

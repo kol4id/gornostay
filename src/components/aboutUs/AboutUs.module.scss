@@ -38,6 +38,7 @@
 
     &_info{
         display: flex;
+        gap: $space-x4;
 
         @media (max-width: 1200px) {
             gap: $space-x2;
@@ -52,18 +53,18 @@
             height: 443px;
 
             @media (max-width: 1200px) {
-                padding: $space-x2;
+                padding: 0 $space-x2;
                 height: auto;
             }
 
             @media (max-width: 390px) {
-                padding: $space-x1;
+                padding: 0 $space-x1;
             }
 
 
-            @media (max-width: 320px) {
-                padding: $space-x1;
-            }
+            // @media (max-width: 320px) {
+            //     padding: $space-x1;
+            // }
 
             &_text{
                 display: flex;
@@ -74,21 +75,35 @@
                     gap: $space-x2;
                 }
 
-                span{
-                    line-height: 140%;
-                    font-size: 28px;
-                    letter-spacing: 0%;
+                &_main{
+                    display: flex;
+                    flex-direction: column;
 
                     @media (max-width: 1200px) {
-                        font-size: 18px;
+                        gap: $space-x2;
                     }
-                }
 
-                .p_second{
-                    @media (max-width: 1200px) {
-                        display: none;
+                    span{
+                        line-height: 140%;
+                        font-size: 28px;
+                        letter-spacing: 0%;
+
+                        @media (max-width: 1240px) {
+                            font-size: 26px;
+                        }
+
+                        @media (max-width: 1200px) {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .p_second{
+                        // @media (max-width: 1200px) {
+                        //     display: none;
+                        // }
                     }
                 }
+                
 
                 &_list{
                     display: flex;

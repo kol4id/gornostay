@@ -21,7 +21,7 @@ const FooterSocial = () =>{
                         />
                     </a>
                     <a
-                        href='https://vk.com/club154017977'
+                        href='https://t.me/gornostaycenter'
                         target="_blank"
                         rel="noopener noreferrer"
                     >

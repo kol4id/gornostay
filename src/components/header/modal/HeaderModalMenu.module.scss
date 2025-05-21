@@ -27,6 +27,41 @@
             padding: 0px $space-x1;
         }
 
+        &_title{
+            display: flex;
+            width: 222px;
+            align-items: center;
+            gap: $space-x2;
+
+            @media (max-width: 1200px) {
+                gap: 12px;
+                width: 186px;
+            }
+
+            .container{
+                position: relative;
+                width: 60px;
+                height: 60px;
+
+                @media (max-width: 1200px) {
+                    width: 52px;
+                    height: 52px;
+                }
+
+                
+            }
+
+            h3{
+                font-weight: 600;
+                font-family: var(--font-montserrat-alt);
+                font-size: 24px;
+
+                @media (max-width: 1200px) {
+                    font-size: 20px;
+                }
+            }
+        }
+
         &_tablet{
             display: none;
 
@@ -77,6 +112,12 @@
             padding-bottom: 32px;
             border-bottom: 1px solid $border-secondary;
 
+            nav{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
             a{
                 width: fit-content;
             }
@@ -96,7 +137,7 @@
             width: 208px;
             margin-top: 16px;
             
-            p.phone{
+            .phone{
                 font-size: 18px; 
             }
 

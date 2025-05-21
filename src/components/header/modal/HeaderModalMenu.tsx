@@ -1,6 +1,5 @@
 import { FC } from "react"
 import styles from './HeaderModalMenu.module.scss'
-import Title from "../Title"
 import { motion } from "framer-motion"
 import HeaderMenu from "./HeaderMenu"
 import Image from "next/image";
@@ -22,19 +21,31 @@ const HeaderModalMenu: FC<IProps> = ({onClose}) =>{
             >
                 <main className={styles.menu}>
                     <header className={styles.header}>
-                        <Title/>
+                        <article className={styles.header_title}>
+                            <section className={styles.container}>
+                                <Image
+                                    src="/logo.svg"
+                                    alt='app logo'
+                                    fill
+                                />
+                            </section>
+                            {/* <h3>Горностай</h3> */}
+                        </article>
                         <HeaderMenu onClose={onClose}/>
                     </header>
                     <section className={styles.info}>
                         <div className={styles.links}>
                             <h6>Клиника</h6>
-                            <a href='#services' onClick={onClose}>Услуги</a>
-                            <a href='#aboutUs' onClick={onClose}>О нас</a>
-                            <a href='#ourDoctors' onClick={onClose}>Наши доктора</a>
-                            <a href='#sertificates' onClick={onClose}>Сертификаты</a>
+                            <nav>
+                                <a href='#services' onClick={onClose}>Услуги</a>
+                                <a href='#aboutUs' onClick={onClose}>О нас</a>
+                                <a href='#ourDoctors' onClick={onClose}>Наши доктора</a>
+                                <a href='#sertificates' onClick={onClose}>Сертификаты</a>
+                            </nav>
                         </div>
                         <article className={styles.phone}>
-                            <p className={styles.phone}>8 (958) 125-25-34</p>
+                            <a href="tel:+79851252534" className={styles.phone}>8 (985) 125-25-34</a>
+                            {/* <p className={styles.phone}>8 (958) 125-25-34</p> */}
                             <section className={styles.map}>
                                 <Image
                                     className={styles.map_image}

@@ -9,7 +9,8 @@ const FooterContacts = () =>{
                     Садовый проезд, 4А
                 </p>
                 <p>gornostaycenter@mail.ru</p>
-                <p>8 (985) 125-25-34</p>
+                {/* <p>8 (985) 125-25-34</p> */}
+                <a href="tel:+79851252534" className={styles.phone}>8 (985) 125-25-34</a>
             </div>
         </>
     )

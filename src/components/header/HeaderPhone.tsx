@@ -5,7 +5,7 @@ const HeaderPhone = () =>{
     return(
         <>
             <article className={styles.header_menu_phone}>
-                <p className={styles.phone}>8 (958) 125-25-34</p>
+                <a href="tel:+79851252534" className={styles.phone}>8 (985) 125-25-34</a>
                 <section className={styles.map}>
                     <Image
                         className={styles.map_image}

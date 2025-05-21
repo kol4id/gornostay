@@ -8,12 +8,12 @@ const AboutUs = () => {
         <section className={styles.about_us_info}>
             <article className={styles.left}>
                 <div className={styles.left_text}>
-                    <div>
-                        <span>В “Горностае“ мы заботимся о здоровье ваших питомцев, оказывая качественные ветеринарные услуги.</span>
-                        <span className={styles.p_second}>Опытная команда докторов клиники готова предложить помощь в самых сложных случаях.</span>
+                    <div className={styles.left_text_main}>
+                        <span>В ветеринарной клинике «Горностай» работают опытные врачи общей практики с узкоспециализированными компетенциями. Оборудование высшего класса обеспечивает точную диагностику и эффективное лечение.</span>
+                        <span className={styles.p_second}>Мы учитываем эмоциональное состояние питомцев и применяем индивидуальный подход к каждому пациенту.</span>
                     </div>
-                    <ul className={styles.left_text_list}>
-                        <li>
+                    {/* <ul className={styles.left_text_list}> */}
+                        {/* <li>
                             <Image
                                 src="/icon_m_calendar.svg"
                                 alt="calendar icon"
@@ -42,8 +42,8 @@ const AboutUs = () => {
                             />
                             <span className={styles.first}>Оказываем полный спектр ветеринарных услуг</span>
                             <span className={styles.second}>Полный спектр услуг</span>
-                        </li>
-                    </ul>
+                        </li> */}
+                    {/* </ul> */}
                 </div>
                 <a href='#consultation' className={styles.ctaButton}>Оставить заявку</a>
             </article>

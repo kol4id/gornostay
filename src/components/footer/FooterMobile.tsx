@@ -18,7 +18,8 @@ const FooterMobile = () =>{
                     <h6>Контакты</h6>
                     <p> г. Реутов, Садовый проезд, 4А</p>
                     <p>gornostaycenter@mail.ru</p>
-                    <p>8 (985) 125-25-34</p>
+                    {/* <p>8 (985) 125-25-34</p> */}
+                    <a href="tel:+79851252534" className={styles.phone}>8 (985) 125-25-34</a>
                 </div>
                 <div className={styles.work_time}>
                     <h6>График работы</h6>
@@ -38,7 +39,7 @@ const FooterMobile = () =>{
                         />
                     </a>
                     <a
-                        href='https://vk.com/club154017977'
+                        href='https://t.me/gornostaycenter'
                         target="_blank"
                         rel="noopener noreferrer"
                     >

@@ -36,13 +36,31 @@
         align-items: center;
         gap: $space-x2;
 
+        @media (max-width: 1200px) {
+            gap: 12px;
+            width: 186px;
+        }
+
+        .container{
+            position: relative;
+            width: 60px;
+            height: 60px;
+
+            @media (max-width: 1200px) {
+                width: 52px;
+                height: 52px;
+            }
+
+            
+        }
+
         h3{
             font-weight: 600;
             font-family: var(--font-montserrat-alt);
             font-size: 24px;
 
-            @media (max-width: 600px) {
-                display: none;
+            @media (max-width: 1200px) {
+                font-size: 20px;
             }
         }
     }
@@ -83,7 +101,7 @@
             width: 208px;
             height: 49px;
             
-            p.phone{
+            .phone{
                font-size: 18px; 
             }
 

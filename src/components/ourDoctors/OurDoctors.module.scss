@@ -20,33 +20,56 @@
         padding: 0 $space-x1;        
     }
 
-    h2{
-        font-size: 56px;
-        font-weight: 400;
-        line-height: 120%;
+    &_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        @media (max-width: 1200px) {
-            
-            font-size: 36px;
-            line-height: 130%;
+        h2{
+            font-size: 56px;
+            font-weight: 400;
+            line-height: 120%;
+
+            @media (max-width: 1200px) {
+                
+                font-size: 36px;
+                line-height: 130%;
+            }
+
         }
 
+        .buttons{
+            display: flex;
+            gap: $space-x2;
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
+
+            button{
+                height: 40px;
+                width: 40px;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+            }
+        }
     }
+
+   
 
     &_info{
         display: flex;
         gap: $space-x4;
+        overflow-x: auto;
         
-        @media (min-width: 1136px) {
-            justify-content: center;
-        }
+        @media (min-width: 1200px) {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
 
-        @media (max-width: 1240px) {
-            gap: $space-x2;        
-        }
-
-        @media (max-width: 1200px) {
-            overflow-x: auto;
+            &::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
         }
 
         .card{
@@ -59,9 +82,9 @@
                 width: 276px;
                 height: 376px;
 
-                @media (max-width: 1200px) {
-                    width: 260px;
-                }
+                // @media (max-width: 1200px) {
+                //     width: 260px;
+                // }
 
                 &_image{
                     object-fit: cover;
@@ -74,6 +97,8 @@
                 flex-direction: column;
                 gap: $space-x05;
                 text-align: center;
+                // justify-content: center;
+                align-items: center;
 
                 h6{
                     font-size: 24px;
@@ -82,6 +107,7 @@
                 }
 
                 p{
+                    // max-width: 250px;
                     font-size: 18px;
                     line-height: 140%;
                 }

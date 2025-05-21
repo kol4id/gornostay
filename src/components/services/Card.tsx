@@ -34,14 +34,15 @@ const Card: FC<IProps> = (props) =>{
                     border: props.isWhite ? '1px solid #1D202540' : '',
                 }}
             >
-                {props.price && <p 
+                <div></div>
+                {/* {props.price && <p 
                     style={{
                         backgroundColor: background,
                         color: color
                     }}
                     className={styles.price}>
                         {props.price}
-                    </p>}
+                    </p>} */}
                 <section className={styles.title}>
                     <h5
                         style={{color: props.titleColor ?? ''}}
