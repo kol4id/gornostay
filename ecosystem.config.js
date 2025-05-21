@@ -3,7 +3,7 @@ module.exports = {
             name: 'next-app',
             script: 'server.js',
             cwd: './', 
-            instances: 2, 
+            instances: 1, 
             exec_mode: 'cluster', 
             watch: false, 
             autorestart: true, 
